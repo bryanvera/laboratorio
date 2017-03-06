@@ -1,9 +1,9 @@
 git init
 git remote add origin <link>
-[[B[Aggit config --global user.name "Nombre de la persona"
+git config --global user.name "Nombre de la persona"
 git cofnig --global user.email "Email de la persona"
-[A[A[C[C[C[B[C[C[C[[3~[C[Dn[C[n[C[Df[Bgit add "Nombre del archivo"
+git add "Nombre del archivo"
 git commit -m "DocumentaciÃon del archivo"
 git push origin master
 Usar git --version en cmd, en caso de no estar, abrir "git bash" y repetir el comando.
-git clone <link> Âpara clonar un repositorio
+git clone <link> para clonar un repositorio
