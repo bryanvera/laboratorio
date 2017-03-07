@@ -1,0 +1,28 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+
+int posfinCaracter(char *cadenaO , char letra){
+	
+	int i,indice; 
+	int n=longCadena(cadenaO);
+
+	for (i=0;i<=n;i++){
+		if (cadenaO[i] == letra) {
+			indice=i;
+			printf(" la posicion del caracter es:%d \n",indice);
+		}
+		else{
+			return -1;
+		}
+	}
+	return indice;
+}
+
+int main(int argc, char *argv[]){
+	
+	char *cad1=argv[1];
+	char *car=argv[2];
+	posfinCaracter(cad1,car);
+}

@@ -1,0 +1,52 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+void main(){
+	int jugador,intentos,num1,num2,suma,resta,multi;
+	intentos=1;
+	srand (time(NULL));
+	num1=rand()%51;
+	num2=rand()%51;
+	suma=(num1+num2);
+	resta=(num1-num2);
+	multi=(num1*num2);
+	printf (" Adivina el numero secreto\n");
+	scanf("%d",&jugador);
+	
+
+	if(jugador==num1	||jugador==num2||jugador==suma||jugador==resta||jugador==multi){
+		printf("adivinaste\n");
+	}
+	else{
+		while(jugador==num1&&jugador==num2&&jugador==suma&&jugador==resta&&jugador==multi){
+			if(jugador>num1){
+				printf("el numero1 es menor\n");
+				}
+			else{
+				printf("el numero1 es mayor\n");
+				}
+			
+			if(jugador>num2){
+				printf("el numero2 es menor\n");
+				}
+			else{
+				printf("el numero2 es mayor\n");
+				}
+
+			if(num1<jugador && jugador<num2){
+				printf("esta entre los dos numeros\n");
+				}
+			printf("escriba el numero secreto\n");
+			scanf("%d",&jugador);
+			intentos++;
+		}
+	printf("lo lograste en: %d \n",intentos);
+	}
+}
+
+
+
+				
+			
+		

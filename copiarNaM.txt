@@ -1,0 +1,24 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+/* copia una cadena de caracteres desde una posicion inicial hasta una posicion final*/
+		
+char *copiarNaM(char *cadOrigen,int n,int m){
+	
+	int i,j=0;
+	char *cadDestino;
+	cadDestino=(char *)malloc(m-n+1);
+	for(i=n;i<=m;i++,j++){
+		cadDestino[j]=cadOrigen[i];
+	}
+	printf("%s\n",destino);
+	return cadDestino;
+}
+void main(int argc, char *argv[]){
+	
+	char *cad1=argv[1];
+	int n=atoi(argv[2]);
+	int m=atoi(argv[3]);
+	copiarNaM(cad1,n,m);
+}

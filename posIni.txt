@@ -1,0 +1,29 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+
+/* compara la cadena origen iterando cada caracter y si encuestra el caracter imprime su posicion */
+
+int posiniCaracter(char *cadenaO , char letra){
+	
+	int i ; 
+	int n=strlen(cadenaO);
+
+	for (i=0;i<=n;i++){
+		if (cadenaO[i] == letra) {
+
+			printf(" la posicion del caracter es:%d \n", i);
+		}
+		else {
+			printf("no se encontro el caracter \n");
+		}
+	}
+}
+
+int main(int argc, char *argv[]){
+
+	char *cad1=argv[1];
+	char *car=argv[2];
+	posiniCaracter(cad1,car);
+}

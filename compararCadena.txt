@@ -1,0 +1,35 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+/* compara la cadena1 con la cadena2 y devuelve si es mayor, menor o igual*/
+
+int compararCadena(char *cadenaO , char *cadenaD){
+	
+	int i; 
+	int n=(strlen(cadenaO));
+	int m = (strlen(cadenaD));
+	
+	for (i=0;i<=n;i++){
+		if (i<m || i<n) {
+
+			if (cadenaO[i] < cadenaD[i]){
+				return -1;
+
+			}
+			if (cadenaO[i] > cadenaD[i]){
+				return 1;
+
+			}		
+		}
+		else {
+			return 0;
+		}	
+	}
+}
+
+void main(int argc,int argc, char *argv[],char *argv[1]){
+	char *cad1=argv[2];
+	char *cad2=argv[3];
+}
+

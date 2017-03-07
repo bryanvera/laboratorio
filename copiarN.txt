@@ -1,0 +1,26 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+/* copia una cadena de caracteres desde una posicion determinada*/
+
+char*copiarN(char *cadOrigen,int n){
+	int i;
+	char *cadDestino;
+	cadDestino=(char *)malloc(strlen(cadOrigen)+1);
+	for (i=0;i<=n;i++){
+		if(i<n){
+			cadDestino[i]=cadOrigen[i];
+			}
+		else{
+			cadDestino[i]= '\0';
+			}
+	}
+	printf("%s\n",cadDestino);
+	return cadDestino;
+}
+void main(int argc, char *argv[]){
+	char *cad1=argv[1];
+	int n=atoi(argv[2]);
+	copiarN(cad1,n);
+}

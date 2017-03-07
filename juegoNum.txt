@@ -1,0 +1,30 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+void main(){
+	int jugador,intentos,numM;
+	srand (time(NULL));
+	intentos=1;
+	numM=rand()%101;
+	printf (" Adivina el número\n");
+	scanf("%d",&jugador);
+	
+
+	while (jugador!=numM){
+		if (jugador>numM){
+			printf("Es menor\n");
+			scanf("%d", &jugador);
+		}
+		if (jugador<numM){
+			printf("Es mayor\n");
+			scanf("%d", &jugador);
+		}			
+		intentos+=1;
+	} 	
+
+	if(jugador==numM){
+		printf("\n Adivinaste");
+		printf("\n Lo lograste en %d intentos",intentos);
+	}
+} 	

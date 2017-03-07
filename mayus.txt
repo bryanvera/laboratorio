@@ -1,0 +1,24 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<string.h>
+
+/* coloca todas las letras de una cadena de texto en mayusculas */
+
+char* mayusculas(char *cadenaO){
+	
+	int i; 
+	int n=strlen(cadenaO);
+
+	for (i=0;i<n;i++){
+		if (97 >= cadenaO[i]<=122) {
+			cadenaO[i]=cadenaO[i] -32;
+		}
+	}
+	printf("%s",cadenaO);
+	return cadenaO;
+}
+
+char* main(int argc,char *argv[]){
+	char *cad1=argv[1];
+	mayuscula(cad1);
+}

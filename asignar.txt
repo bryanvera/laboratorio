@@ -1,0 +1,25 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+/* recibe un caracter y remplaza ese caracter en todas las posiciones*/	
+
+char* asignarCad(char *cadenaO , char car){
+	
+	int i; 
+	int n=(strlen(cadenaO));
+
+	for (i=0;i<n;i++){
+		cadenaO[i]=car;
+
+	}
+	printf("%s\n",cadenaO);
+	return cadenaO;
+}
+void main(int argc, char *argv[]){
+	
+	char *cad=argv[1];
+	char *car=argv[2];
+	asignarCad(cadenaO,car);
+
+}

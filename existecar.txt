@@ -1,0 +1,27 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+/* compara la cadena1 iterando cada caracter y si encuentra el caracter retorna 1*/
+
+int existeCaracter(char *cadenaO , char letra){
+	
+	int i; 
+	int n=strlen(cadenaO);
+
+	for (i=0;i<=n;i++){
+		if (cadenaO[i] == letra) {
+			return 1;
+		}
+		else{
+			printf("no se encontro el caracter \n");
+		}
+	}
+}
+
+int main(int argc, char *argv[]){
+	
+	char *cad1=argv[1];
+	char *car=argv[2];
+	existeCaracter(cad1,car);
+}
